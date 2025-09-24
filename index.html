@@ -92,6 +92,25 @@
     /* 드롭다운 높이(모바일) */
     select{height:auto;overflow-y:auto}
     @media only screen and (max-width:768px){select{font-size:16px;max-height:200px;overflow-y:scroll}}
+
+
+/* ===== 공지 바 수정 (줄바꿈 허용) ===== */
+.notice-bar {
+  /* '공지' 라벨과 텍스트의 세로 정렬을 시작점(상단)으로 맞춤 */
+  align-items: flex-start;
+}
+
+.notice-track {
+  /* 텍스트가 길어지면 자동으로 줄바꿈 처리 (가장 중요한 변경) */
+  white-space: normal;
+
+  /* 넘치는 텍스트를 숨기지 않도록 변경 */
+  overflow: visible;
+
+  /* 말줄임표(...) 제거 */
+  text-overflow: clip;
+}
+
   </style>
 </head>
 <body>
